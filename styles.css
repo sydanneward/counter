@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #ab1417;
+    font-family: Proxima Nova, sans-serif;
+    overflow: hidden;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.counter-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 1s ease;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.counter-container.active {
+    display: flex;
+    opacity: 1;
+}
+
+.counter-container.inactive {
+    opacity: 0;
+}
+
+.counter {
+    font-size: 40px;
+    margin: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.counter-container img {
+    width: 10%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
